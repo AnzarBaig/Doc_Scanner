@@ -27,7 +27,7 @@ for c in contours:
         break
 approx=corner_points.mapp(target)
 
-pts=np.float32([[0,0],[800,0],[800,800],[0,800]])
+pts=np.float32([[0,0],[800,0],[900,900],[0,800]])
 
 op = cv2.getPerspectiveTransform(approx,pts)
 dst = cv2.warpPerspective(orig,op,(800,800))
